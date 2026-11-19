@@ -1,0 +1,23 @@
+julia_version,case,variant,role,time_ns_min,time_ns_median,allocs,memory_bytes,samples,speedup_vs_baseline
+1.13.3,type_stability,Vector{PaymentEvent},slow,10082276,10830224,199999,3199984,20,1.00
+1.13.3,type_stability,Vector{Refund},fast,50098,51446,0,0,20,201.25
+1.13.3,const_global,non-const untyped,slow,16800817,17501232,800000,12800000,20,1.00
+1.13.3,const_global,const typed,fast,1295027,1493856,0,0,20,12.97
+1.13.3,slice_vs_view,copy row slice,slow,1133920,1193984,8003,2336072,20,1.00
+1.13.3,slice_vs_view,view row slice,fast,709778,817104,3,32072,20,1.60
+1.13.3,slice_vs_view,view column,control,81427,81980,2,576,20,13.93
+1.13.3,threads,serial,slow,1593785,1761168,0,0,20,1.00
+1.13.3,threads,false sharing,variant,13082984,15206400,25,1680,20,0.12
+1.13.3,threads,padded counters,variant,10269115,10370302,25,2128,20,0.16
+1.13.3,threads,spawn + chunk,variant,478096,528978,115,6864,20,3.33
+1.10.12,type_stability,Vector{PaymentEvent},slow,9441430,9906430,199999,3199984,20,1.00
+1.10.12,type_stability,Vector{Refund},fast,41653,42098,0,0,20,226.67
+1.10.12,const_global,non-const untyped,slow,16372747,17490276,800000,12800000,20,1.00
+1.10.12,const_global,const typed,fast,1096874,1127448,0,0,20,14.93
+1.10.12,slice_vs_view,copy row slice,slow,792853,829912,4002,2336048,20,1.00
+1.10.12,slice_vs_view,view row slice,fast,303251,340610,2,32048,20,2.61
+1.10.12,slice_vs_view,view column,control,77822,81496,1,576,20,10.19
+1.10.12,threads,serial,slow,2089583,2320074,0,0,20,1.00
+1.10.12,threads,false sharing,variant,11271575,13812395,22,2288,20,0.19
+1.10.12,threads,padded counters,variant,9656626,9848006,22,2592,20,0.22
+1.10.12,threads,spawn + chunk,variant,448527,495390,114,9408,20,4.66
